@@ -38,11 +38,14 @@ function FeaturedCourses() {
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow p-2">
                     {course.description}
                   </p>
+                  <div className="mt-5 text-center">
                   <Link
                     href={`/courses/${course.slug}`}
-                    className="text-white ">
+                    className="px-2 py-2 rounded border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200">
                     Learn More
                   </Link>
+                  </div>
+                  
                 </div>
               </BackgroundGradient>
             </div>
