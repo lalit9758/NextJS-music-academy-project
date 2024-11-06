@@ -7,6 +7,7 @@ function UpComingWebinar() {
 
     const featuredWebinars = [
         {
+          id: 1,  // Added a unique id
           title: 'Understanding Music Theory',
           description:
             'Dive deep into the fundamentals of music theory and enhance your musical skills.',
@@ -14,6 +15,7 @@ function UpComingWebinar() {
           isFeatured: true,
         },
         {
+          id: 2,
           title: 'The Art of Songwriting',
           description:
             'Learn the craft of songwriting from experienced musicians and songwriters.',
@@ -21,6 +23,7 @@ function UpComingWebinar() {
           isFeatured: true,
         },
         {
+          id: 3,
           title: 'Mastering Your Instrument',
           description:
             'Advanced techniques to master your musical instrument of choice.',
@@ -28,14 +31,15 @@ function UpComingWebinar() {
           isFeatured: true,
         },
         {
+          id: 4,
           title: 'Music Production Essentials',
           description:
             'Get started with music production with this comprehensive overview.',
           slug: 'music-production-essentials',
           isFeatured: true,
         },
-        // Added two more webinars
         {
+          id: 5,
           title: 'Live Performance Techniques',
           description:
             'Enhance your live performance skills with expert tips and strategies.',
@@ -43,6 +47,7 @@ function UpComingWebinar() {
           isFeatured: true,
         },
         {
+          id: 6,
           title: 'Digital Music Marketing',
           description:
             'Learn how to promote your music effectively in the digital age.',
@@ -61,13 +66,12 @@ function UpComingWebinar() {
                
             <div className="mt-10">
           <HoverEffect
-          items={featuredWebinars.map(webinar => (
-            {
+            items={featuredWebinars.map(webinar => ({
+              key: webinar.id,  // Add unique key using the id
               title: webinar.title,
               description: webinar.description,
-              link: '/'
-            }
-          ))}
+              link: `/${webinar.slug}`  // Update link to use specific slug
+            }))}
           />
         </div>
 
